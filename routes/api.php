@@ -25,6 +25,7 @@ Route::middleware('auth:api') -> prefix('v1')->group(function(){
     //  'index']);
      Route::apiResource('/authors', AuthorsController::class);
      Route::apiResource('/books', BooksController::class);
+    //  Route::apiResource('levels', )
 });
 Route::get('/test', function(Request $request){
     return 'Authenticated';
