@@ -19,14 +19,14 @@ Route::middleware('auth:api') -> prefix('v1')->group(function(){
     Route::get('/user', function(Request $request){
         return $request ->user();
     });
-    // Route::get('/authors/{author}', [AuthorsController::class,
-    //  'show']);
-    // Route::get('/authors', [AuthorsController::class,
-    //  'index']);
-     Route::apiResource('/authors', AuthorsController::class);
-     Route::apiResource('/books', BooksController::class);
+    Route::get('/authors/{author}', [AuthorsController::class,
+     'show']);
+    Route::get('/authors', [AuthorsController::class,
+     'index']);
     //  Route::apiResource('levels', )
 });
+Route::apiResource('/authors', AuthorsController::class);
+Route::apiResource('/books', BooksController::class);
 Route::get('/test', function(Request $request){
     return 'Authenticated';
 });

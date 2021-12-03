@@ -13,11 +13,11 @@ class TypesSeeder extends Seeder
      */
     public function run()
     {
-        // $typeArr = ['Fiction', 'Non-Fiction', 'Sci-Fi', 'Biography', 'autobiography'];
-        // for ($i = 0; $i < count($typeArr); $i++) {
-        //     $type_name = new Types;
-        //     $type_name->type = $typeArr[$i];
-        //     $type_name->save();
-    // }
+        $typeArr = ['Fiction', 'Non-Fiction', 'Sci-Fi', 'Biography', 'autobiography'];
+        for ($i = 0; $i < count($typeArr); $i++) {
+            $type_name = new Types;
+            $type_name->type = $typeArr[$i];
+            $type_name->save();
+    }
 }
 }

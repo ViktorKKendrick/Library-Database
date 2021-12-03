@@ -14,18 +14,9 @@ class CreateLevelsTable extends Migration
     public function up()
     {
         Schema::create('levels', function (Blueprint $table) {
-            $table->unsignedBigInteger('id');
+            $table->id();
 
-            $table->unsignedBigInteger('user_id');
-                    $table->foreign('user_id')
-                        ->references('id')
-                        ->on('User')
-                        ->cascade('delete');
-            $table->unsignedBigInteger('book_id');
-                    // $table->foreign('book_id')
-                    //     ->references('id')
-                    //     ->on('Book')
-                    //     ->cascade('delete');
+            $table->integer('level');
             // $table->foreign('id')
             //     ->references('id')
             //     ->on('book')
